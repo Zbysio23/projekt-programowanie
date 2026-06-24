@@ -11,7 +11,7 @@ AStudentPawn::AStudentPawn()
 
 	// Dodajemy domyœlne wartoœci
 	TestProgress = 0.0f;
-	WritingSpeed = 5.0f; // Piszesz 5% testu w sekundê
+	WritingSpeed = 3.0f; // Piszesz 3% testu w sekundê
 	bIsWriting = false;
 
 	PhoneBattery = 100.0f;     // Startujemy ze 100% baterii
@@ -46,8 +46,8 @@ void AStudentPawn::Tick(float DeltaTime)
 	// Zu¿ycie baterii, gdy telefon jest w³¹czony
 	if (bIsLookingAtPhone)
 	{
-		// Bateria spada np. o 2% na sekundê
-		PhoneBattery -= 2.0f * DeltaTime;
+		// Bateria spada o 5% na sekundê
+		PhoneBattery -= 5.0f * DeltaTime;
 
 		// Blokada, ¿eby nie spad³a poni¿ej zera
 		if (PhoneBattery <= 0.0f)
